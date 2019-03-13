@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">aula1</string>
+    <string name="text_button">ok</string>
+    <string name="title_activity_cadastrar">CadastrarActivity</string>
+</resources>
