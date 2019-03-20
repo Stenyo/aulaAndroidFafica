@@ -25,14 +25,15 @@ import com.parallaxsolutions.aula1.activitys.CadastrarActivity;
 import com.parallaxsolutions.aula1.models.User;
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
+import java.util.List;
 import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
     public static final int LOGIN_REQUEST = 5;
     Calendar myCalendar = Calendar.getInstance();
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
