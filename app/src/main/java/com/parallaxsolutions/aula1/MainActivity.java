@@ -22,6 +22,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.parallaxsolutions.aula1.activitys.CadastrarActivity;
+import com.parallaxsolutions.aula1.activitys.MenuActivity;
 import com.parallaxsolutions.aula1.models.User;
 
 import java.text.SimpleDateFormat;
@@ -47,6 +48,7 @@ public class MainActivity extends AppCompatActivity {
         Button enviar = findViewById(R.id.button_enviar);
         Button btnCalen = findViewById(R.id.button_calendar);
         Button btnLigar = findViewById(R.id.button_call);
+        Button btnMenu = findViewById(R.id.menu_button);
 
 
         enviar.setOnClickListener(v -> {
@@ -75,7 +77,10 @@ public class MainActivity extends AppCompatActivity {
                     .show();
 
         });
-
+        btnMenu.setOnClickListener( v->{
+            Intent i = new Intent(v.getContext(), MenuActivity.class);
+            startActivity(i);
+        });
         shareTxt.setOnClickListener(v -> {
             Intent sendIntent = new Intent();
             sendIntent.setAction(Intent.ACTION_SEND);

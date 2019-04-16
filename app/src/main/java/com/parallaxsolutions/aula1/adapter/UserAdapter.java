@@ -1,10 +1,12 @@
 package com.parallaxsolutions.aula1.adapter;
 
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.parallaxsolutions.aula1.R;
 import com.parallaxsolutions.aula1.models.User;
@@ -54,6 +56,9 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder> {
             nome.setText(user.nome);
             email.setText(user.email);
             data.setText(user.diaCadastro);
+            nome.setOnClickListener(v ->{
+                Toast.makeText(v.getContext(),user.nome,Toast.LENGTH_LONG).show();
+            });
         }
     }
 

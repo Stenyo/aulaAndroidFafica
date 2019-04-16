@@ -2,8 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.parallaxsolutions.aula1">
 
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>
-
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
@@ -22,7 +21,10 @@
         </activity>
         <activity
             android:name=".activitys.CadastrarActivity"
-            android:label="@string/title_activity_cadastrar"></activity>
+            android:label="@string/title_activity_cadastrar" />
+        <activity
+            android:name=".activitys.MenuActivity"
+            android:label="@string/title_activity_menu"></activity>
     </application>
 
 </manifest>
