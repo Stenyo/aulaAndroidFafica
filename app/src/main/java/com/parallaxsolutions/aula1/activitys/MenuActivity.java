@@ -16,6 +16,8 @@ import android.support.v4.widget.DrawerLayout;
 import com.parallaxsolutions.aula1.R;
 import com.parallaxsolutions.aula1.fragment.NavigationDrawerFragment;
 import com.parallaxsolutions.aula1.fragment.Op1Fragment;
+import com.parallaxsolutions.aula1.fragment.Op2Fragment;
+import com.parallaxsolutions.aula1.fragment.Op3Fragment;
 
 public class MenuActivity extends AppCompatActivity
         implements NavigationDrawerFragment.NavigationDrawerCallbacks {
@@ -51,10 +53,18 @@ public class MenuActivity extends AppCompatActivity
         fragmentManager.beginTransaction()
                 .replace(R.id.container, PlaceholderFragment.newInstance(position + 1))
                 .commit();
+        FragmentManager fragmentMg = getFragmentManager();
         switch(position) {
-            case 2:
-                FragmentManager fragmentMg = getFragmentManager();
+            case 0:
                 fragmentMg.beginTransaction().replace(R.id.container, new Op1Fragment()).commit();
+                break;
+
+                case 1:
+                fragmentMg.beginTransaction().replace(R.id.container, new Op2Fragment()).commit();
+                break;
+
+                case 2:
+                fragmentMg.beginTransaction().replace(R.id.container, new Op3Fragment()).commit();
                 break;
         }
         // update the main content by replacing fragments
