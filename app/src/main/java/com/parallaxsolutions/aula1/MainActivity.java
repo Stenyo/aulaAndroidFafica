@@ -21,6 +21,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.parallaxsolutions.aula1.DAO.UserDAO;
 import com.parallaxsolutions.aula1.activitys.CadastrarActivity;
 import com.parallaxsolutions.aula1.activitys.MenuActivity;
 import com.parallaxsolutions.aula1.models.User;
@@ -63,6 +64,12 @@ public class MainActivity extends AppCompatActivity {
                             user.nome = nome.getText().toString();
                             user.email = email.getText().toString();
                             user.senha = senha.getText().toString();
+                            user.diaCadastro = "21/05/2019";
+
+                            UserDAO crudUser = new UserDAO(v.getContext());
+                            String result = crudUser.insereDado(user);
+                            Toast.makeText(getBaseContext(),result,Toast.LENGTH_LONG).show();
+
                             Intent i = new Intent(v.getContext(), CadastrarActivity.class);
                             i.putExtra("user", user);
                             startActivityForResult(i, LOGIN_REQUEST);

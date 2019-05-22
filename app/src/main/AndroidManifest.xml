@@ -21,7 +21,7 @@
         </activity>
         <activity
             android:name=".activitys.CadastrarActivity"
-            android:label="@string/title_activity_cadastrar" />
+            android:label="@string/title_activity_cadastrar"/>
         <activity
             android:name=".activitys.MenuActivity"
             android:label="@string/title_activity_menu"></activity>
